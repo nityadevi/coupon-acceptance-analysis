@@ -1,28 +1,54 @@
-# Practical Application 1 — Coupon Acceptance Analysis
+**Coupon Acceptance Analysis**
+**Overview**
 
-This repository contains an exploratory analysis of the **In-Vehicle Coupon Recommendation** dataset (UCI).  
-The goal is to understand what characteristics are associated with **coupon acceptance**.
+This project explores a survey dataset describing different driving scenarios and examines factors that influence whether a driver will accept a coupon. The analysis focuses on understanding acceptance behavior across coupon types and identifying patterns that could support more effective targeting strategies.
 
-## Contents
-- `Practical_Application_1_Unique.ipynb` — analysis notebook
-- `data/coupons.csv` — dataset (provided in starter)
-- `images/` — starter images (and any plots you choose to export)
+**Dataset**
 
-## Summary of Findings
-- The dataset has a few columns with missing values; `car` is almost entirely missing and is dropped.
-- Overall coupon acceptance rate is computed as a baseline.
-- **Bar coupons**: acceptance is much higher for people who already go to bars more than once per month, and highest for segments that reflect an adult social context (e.g., no kid passengers, not widowed).
-- **Coffee House coupons**: acceptance increases with higher coffee-house visit frequency and varies by time of day.
+The dataset includes information on:
 
-## Recommendations
-- Target Bar coupons primarily to frequent bar-goers and relevant contexts.
-- Avoid spending Bar coupons on non-bar-goers and shift effort to higher-performing coupon types.
-- For Coffee House coupons, emphasize timing (morning/afternoon) and frequent visitors.
+Coupon type (e.g., Bar, Coffee House)
+
+Contextual driving features (time, destination, passenger)
+
+Behavioral indicators (venue visit frequency)
+
+Target variable (Y) indicating coupon acceptance
+
+**Data file:**
+data/coupons.csv
+
+**Approach**
+
+Established a baseline coupon acceptance rate
+
+Compared acceptance rates across coupon types
+
+Conducted focused analysis on Bar and Coffee House coupons
+
+Used visualizations to highlight differences in acceptance behavior
+
+The emphasis is on interpretability and exploratory insights.
+**Key Findings**
+
+Bar coupons are more likely to be accepted by individuals who already visit bars frequently.
+
+Acceptance is higher in adult social contexts (e.g., no child passengers).
+
+Coffee House coupon acceptance increases with higher visit frequency and varies by time of day.
+
+Prior behavior is a strong indicator of coupon acceptance across scenarios.
+**Repository Structure**
+coupon-acceptance-analysis/
+Practical_Application_1_Unique.ipynb
+    README.md
+    data/
+        coupons.csv
+    images/
 
 ## How to run
-Open the notebook and run all cells from top to bottom:
+Open and run:
+Practical_Application_1_Unique.ipynb
 
-```bash
-pip install pandas numpy matplotlib seaborn
-```
+The notebook uses relative paths and contains all outputs and visualizations.
 
